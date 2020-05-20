@@ -1,0 +1,11 @@
+git
+autoconf
+automake
+libtool
+build-essential
+pkgconf
+dh-make
+devscripts
+doxygen-latex
+graphviz
+libev-dev
