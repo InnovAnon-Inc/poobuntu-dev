@@ -15,13 +15,9 @@ LABEL org.label-schema.vcs-url="https://github.com/InnovAnon-Inc/poobuntu-dev"
 
 # Run the command inside your image filesystem.
 # Copy the file from your host to your current location.
-COPY dpkg.list .
-RUN apt-fast install `cat dpkg.list`
+COPY dev-dpkg.list .
+RUN apt-fast install `cat dev-dpkg.list`
 
-WORKDIR /
-
-#RUN apt-mark manual libev4
-#RUN apt-fast purge --autoremove -y `cat dpkg.list`
-#RUN ./poobuntu-clean.sh
-#RUN rm -v dpkg.list
+#WORKDIR /
+#RUN ./dev-clean.sh
 
