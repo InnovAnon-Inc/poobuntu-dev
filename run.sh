@@ -15,15 +15,16 @@ docker version ||
 dockerd &
 
 if [ -z ${1+x} ] ; then
-	CMD='docker build -t poobuntu-dev .'
+	CMD='docker build -t innovanon/poobuntu-dev .'
 	PUSH='docker push innovanon/poobuntu-dev:latest'
 else
-	CMD="docker build -t poobuntu-dev-$1 --build-arg DOCKER_TAG=$1 ."
+	#CMD="docker build -t innovanon/poobuntu-dev-$1 --build-arg DOCKER_TAG=$1 ."
+	CMD="docker build -t innovanon/poobuntu-dev-$1 --build-arg VERSION=$1 ."
 	PUSH="docker push innovanon/poobuntu-dev-$1:latest"
 fi
 
 sudo             -- \
-nice -n -20      -- \
+nice -n +20      -- \
 sudo -u `whoami` -- \
 $CMD
 
