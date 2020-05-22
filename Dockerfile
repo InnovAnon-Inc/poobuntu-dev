@@ -16,7 +16,7 @@ LABEL org.label-schema.vcs-url="https://github.com/InnovAnon-Inc/poobuntu-dev"
 # Run the command inside your image filesystem.
 # Copy the file from your host to your current location.
 COPY dev-dpkg.list .
-RUN apt-fast install `cat dev-dpkg.list`
+RUN apt-fast install `grep -v '^[\^#]' dev-dpkg.list`
 
 #WORKDIR /
 #RUN ./dev-clean.sh
