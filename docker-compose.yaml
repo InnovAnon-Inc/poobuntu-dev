@@ -1,4 +1,4 @@
-version: '3'
+version: '3.3'
 services:
   poobuntu-dev:
     #build: .
@@ -6,10 +6,12 @@ services:
       context: .
       args:
         - VERSION=
+        - OS=poobuntu
     hostname: poobuntu-dev
     #environment:
     #  - VERSION=
     image: innovanon/poobuntu-dev:latest
+    container_name: innovanon/poobuntu-dev
 
   poobuntu-dev-20.04:
     #build: .
@@ -17,10 +19,12 @@ services:
       context: .
       args:
         - VERSION=-20.04
+        - OS=poobuntu
     hostname: poobuntu-dev-20.04
     #environment:
     #  - VERSION=-20.04
     image: innovanon/poobuntu-dev-20.04:latest
+    container_name: innovanon/poobuntu-dev-20.04
 
   poobuntu-dev-18.04:
     #build: .
@@ -28,10 +32,12 @@ services:
       context: .
       args:
         - VERSION=-18.04
+        - OS=poobuntu
     hostname: poobuntu-dev-18.04
     #environment:
     #  - VERSION=-18.04
     image: innovanon/poobuntu-dev-18.04:latest
+    container_name: innovanon/poobuntu-dev-18.04
 
   poobuntu-dev-16.04:
     #build: .
@@ -39,8 +45,10 @@ services:
       context: .
       args:
         - VERSION=-16.04
+        - OS=poobuntu
     hostname: poobuntu-dev-16.04
     #environment:
     #  - VERSION=-16.04
     image: innovanon/poobuntu-dev-16.04:latest
+    container_name: innovanon/poobuntu-dev-16.04
 

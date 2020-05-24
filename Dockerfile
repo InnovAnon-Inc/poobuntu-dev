@@ -1,6 +1,9 @@
 # Use the official image as a parent image.
 ARG VERSION
-FROM innovanon/poobuntu${VERSION}:latest
+ARG OS
+FROM innovanon/${OS}${VERSION}:latest
+ARG VERSION
+ARG OS
 MAINTAINER Innovations Anonymous <InnovAnon-Inc@protonmail.com>
 
 LABEL version="1.0"                                                     \
