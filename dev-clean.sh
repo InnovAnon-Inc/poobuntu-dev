@@ -1,5 +1,8 @@
-RUN apt-mark manual libev4
-RUN apt-fast purge `grep -v '^[\^#]' dev-dpkg.list`
-RUN ./poobuntu-clean.sh
-RUN rm -v dev-dpkg.list
+#! /bin/bash
+set -exu
+
+apt-mark manual libev4
+apt-fast purge `grep -v '^[\^#]' dev-dpkg.list`
+./poobuntu-clean.sh
+rm -v dev-dpkg.list
 
