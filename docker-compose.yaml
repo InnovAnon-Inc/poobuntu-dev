@@ -11,7 +11,7 @@ services:
     #environment:
     #  - VERSION=
     image: innovanon/poobuntu-dev:latest
-    container_name: innovanon/poobuntu-dev
+    container_name: poobuntu-dev
 
   poobuntu-dev-20.04:
     #build: .
@@ -24,7 +24,7 @@ services:
     #environment:
     #  - VERSION=-20.04
     image: innovanon/poobuntu-dev-20.04:latest
-    container_name: innovanon/poobuntu-dev-20.04
+    container_name: poobuntu-dev-20.04
 
   poobuntu-dev-18.04:
     #build: .
@@ -37,7 +37,7 @@ services:
     #environment:
     #  - VERSION=-18.04
     image: innovanon/poobuntu-dev-18.04:latest
-    container_name: innovanon/poobuntu-dev-18.04
+    container_name: poobuntu-dev-18.04
 
   poobuntu-dev-16.04:
     #build: .
@@ -50,5 +50,5 @@ services:
     #environment:
     #  - VERSION=-16.04
     image: innovanon/poobuntu-dev-16.04:latest
-    container_name: innovanon/poobuntu-dev-16.04
+    container_name: poobuntu-dev-16.04
 
