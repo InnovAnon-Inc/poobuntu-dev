@@ -20,7 +20,8 @@ LABEL version="1.0"                                                     \
 # Run the command inside your image filesystem.
 # Copy the file from your host to your current location.
 COPY dev-dpkg.list .
-RUN apt-fast install `grep -v '^[\^#]' dev-dpkg.list`
+RUN apt-fast update \
+ && apt-fast install `grep -v '^[\^#]' dev-dpkg.list`
 
 #WORKDIR /
 #RUN ./dev-clean.sh
