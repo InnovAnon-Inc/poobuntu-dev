@@ -1,6 +1,7 @@
 git
 autoconf
 automake
+caca-utils
 libtool
 build-essential
 pkgconf
